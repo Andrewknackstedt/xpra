@@ -1,0 +1,45 @@
+<!-- Based on https://github.com/squidfunk/mkdocs-material/blob/d32ca846f1ea853baee72c0f762fcf876d36d658/material/.overrides/home.html -->
+{% extends "main.html" %}
+{% block tabs %}
+{{ super() }}
+<style>
+    .md-header {
+        position: initial
+    }
+
+    .md-main__inner {
+        margin: 0
+    }
+
+    .md-sidebar--primary {
+        display: none
+    }
+
+    .mdx-hero__image img {
+        border: 1px solid #ffffff11;
+        border-radius: 12px;
+    }
+</style>
+<section class="mdx-container">
+    <div class="md-grid md-typeset">
+        <div class="mdx-hero">
+            <div class="mdx-hero__image">
+                <img src="images/xpra-screenshot.png" width="1409" height="768" draggable="false">
+            </div>
+            <div class="mdx-hero__content">
+                <h1>Remote desktop access for the 21st century</h1>
+                <p>{{ config.site_description }}</p>
+                <a href="{{ page.next_page.url | url }}" title="{{ page.next_page.title | e }}"
+                    class="md-button md-button--primary">
+                    Quick start
+                </a>
+                <a href="{{ 'Debugging' | url }}" title="Material for MkDocs Insiders" class="md-button">
+                    Contribute
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+{% block content %}{% endblock %}
+{% block footer %}{% endblock %}

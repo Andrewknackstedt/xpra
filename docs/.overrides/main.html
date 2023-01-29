@@ -1,0 +1,10 @@
+<!-- Based on https://github.com/squidfunk/mkdocs-material/blob/d32ca846f1ea853baee72c0f762fcf876d36d658/material/.overrides/main.html -->
+{% extends "base.html" %}
+
+{% block extrahead %}
+<link rel="stylesheet" href="{{ 'style.css' | url }}">
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+{% endblock %}
